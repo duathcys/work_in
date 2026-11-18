@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WORK:IN · 노브랜드 매장 업무</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f6f8;--sf:#fff;--ln:#e4e7ec;--tx:#18212b;--mu:#667085;--ac:#0f766e;--acb:#e3f3f0;--wn:#b45309;--wnb:#fdf1e0;--bd:#b42318;--bdb:#fcebe9;--in:#2c5aa0;--inb:#e8eef8;--sd:#101820;--sdt:#c9d1da;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1319;--sf:#161d25;--ln:#26303b;--tx:#e8edf2;--mu:#8b97a4;--ac:#3fb8a9;--acb:#12302d;--wn:#e0a050;--wnb:#33260f;--bd:#f08a80;--bdb:#3a1a17;--in:#7fa8e6;--inb:#16253b;--sd:#0a0f14;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1319;--sf:#161d25;--ln:#26303b;--tx:#e8edf2;--mu:#8b97a4;--ac:#3fb8a9;--acb:#12302d;--wn:#e0a050;--wnb:#33260f;--bd:#f08a80;--bdb:#3a1a17;--in:#7fa8e6;--inb:#16253b;--sd:#0a0f14;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 "Noto Sans KR","Malgun Gothic",system-ui,sans-serif}
+.app{display:grid;grid-template-columns:216px 1fr;min-height:100vh}
+aside{background:var(--sd);color:var(--sdt);padding:20px 14px;display:flex;flex-direction:column;gap:4px}
+.logo{display:flex;align-items:center;gap:10px;padding:4px 8px 18px;font-weight:700;color:#fff;font-size:15px}
+.logo i{width:26px;height:26px;border-radius:7px;background:var(--ac);display:grid;place-items:center;font-style:normal;font-size:13px;color:#fff}
+nav a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:7px;color:var(--sdt);text-decoration:none;font-size:13.5px}
+nav a.on{background:rgba(255,255,255,.09);color:#fff}
+nav a:hover{background:rgba(255,255,255,.06)}
+svg.i{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.store{margin-top:auto;padding:10px;border:1px solid rgba(255,255,255,.12);border-radius:8px;font-size:12.5px}
+.store b{display:block;color:#fff;font-weight:500}
+main{padding:22px 28px 40px;min-width:0}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+h1{font-size:19px;margin:0;font-weight:700}
+.sub{color:var(--mu);font-size:12.5px;margin-top:2px}
+.seg{display:inline-flex;background:var(--sf);border:1px solid var(--ln);border-radius:8px;padding:3px}
+.seg span{padding:5px 12px;border-radius:6px;font-size:13px;color:var(--mu);cursor:pointer}
+.seg span.on{background:var(--acb);color:var(--ac);font-weight:500}
+.flow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12.5px}
+.flow a{color:var(--mu);text-decoration:none;border:1px solid var(--ln);background:var(--sf);border-radius:20px;padding:3px 12px}
+.flow a:hover{border-color:var(--ac);color:var(--ac)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:10px;scroll-margin-top:12px}
+.kpi{padding:14px 16px}
+.kpi small{color:var(--mu);font-size:12.5px}
+.kpi strong{display:block;font-size:24px;line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums}
+.kpi em{font-style:normal;font-size:12px;color:var(--mu)}
+.hero{margin-bottom:16px;border-color:var(--wn)}
+.grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px}
+.col{display:flex;flex-direction:column;gap:16px;min-width:0}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:13px 16px;border-bottom:1px solid var(--ln)}
+.hd h2{font-size:14px;margin:0;font-weight:700}
+.hd span.m{font-size:12px;color:var(--mu)}
+.wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:520px}
+th{font-weight:500;color:var(--mu);font-size:12px;text-align:left;padding:9px 16px;border-bottom:1px solid var(--ln)}
+td{padding:11px 16px;border-bottom:1px solid var(--ln);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+.nm{font-weight:500}.nt{color:var(--mu);font-size:12.5px}
+.bar{height:6px;border-radius:4px;background:var(--ln);overflow:hidden;width:96px;display:inline-block;vertical-align:middle}
+.bar i{display:block;height:100%;background:var(--ac)}
+.pct{font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums;margin-left:8px}
+.b{display:inline-block;font-size:12px;padding:2px 9px;border-radius:20px;font-weight:500;white-space:nowrap}
+.b.done{background:var(--acb);color:var(--ac)}.b.prog{background:var(--inb);color:var(--in)}
+.b.check{background:var(--wnb);color:var(--wn)}.b.todo{background:var(--bdb);color:var(--bd)}
+.b.none{background:var(--bg);color:var(--mu)}
+.src{font-size:12px;color:var(--mu)}
+button{font:inherit;cursor:pointer;border-radius:7px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);padding:5px 11px;font-size:12.5px}
+button:hover{border-color:var(--mu)}
+button.pri{background:var(--ac);border-color:var(--ac);color:#fff}
+button:disabled{opacity:.5;cursor:default}
+.srch{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid var(--ln)}
+.srch input{flex:1;min-width:200px;font:inherit;font-size:13px;padding:7px 11px;border:1px solid var(--ln);border-radius:7px;background:var(--bg);color:var(--tx)}
+.srch input:focus{outline:2px solid var(--ac);outline-offset:-1px}
+.ch{display:flex;gap:6px}
+.ch button.on{background:var(--acb);border-color:var(--ac);color:var(--ac)}
+.arrow{color:var(--mu);font-size:12.5px}
+.in4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 16px}
+.in4>div,.cols div{border:1px solid var(--ln);border-radius:8px;padding:10px 12px;min-height:84px}
+.in4 h4,.cols h4{margin:0 0 6px;font-size:12px;color:var(--mu);font-weight:500}
+.in4 ul,.cols ul{margin:0;padding-left:16px;font-size:12.5px}
+.in4 li{margin-bottom:3px}
+.mode{padding:0 16px 12px;font-size:12.5px;color:var(--mu)}
+.rep{padding:16px}
+.sum{margin:0 0 10px;line-height:1.7}
+.nb{margin:0 0 14px;font-size:12.5px;color:var(--wn);background:var(--wnb);border-radius:7px;padding:7px 11px}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--ln);font-size:12.5px;color:var(--mu)}
+.demo{padding:0 16px 12px;font-size:11.5px;color:var(--mu)}
+.sk{height:12px;border-radius:6px;background:var(--ln);margin:10px 0;animation:p 1s infinite alternate}
+@keyframes p{to{opacity:.4}}
+.stf{padding:10px 16px;border-bottom:1px solid var(--ln)}
+.stf .r{display:flex;align-items:center;justify-content:space-between;padding:3px 0;font-size:13px}
+.stf .r small{color:var(--mu);margin-left:8px;font-size:12px}
+.cap{padding:10px 16px 0;font-size:12px;color:var(--mu)}
+.rec{list-style:none;margin:0;padding:4px 0}
+.rec li{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--ln)}
+.rec li:last-child{border:0}
+.rk{width:22px;height:22px;border-radius:50%;background:var(--acb);color:var(--ac);display:grid;place-items:center;font-size:12px;font-weight:700;flex:none}
+.rec .nm span.b{margin-left:8px}
+.as{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12.5px;color:var(--mu);flex-wrap:wrap}
+select{font:inherit;font-size:12.5px;padding:3px 6px;border:1px solid var(--ln);border-radius:6px;background:var(--bg);color:var(--tx)}
+.tw{padding:14px 16px 4px}
+.tr{position:relative;height:22px;background:var(--bg);border-radius:6px;margin:6px 0}
+.tr i{position:absolute;top:0;bottom:0;border-radius:6px;font-style:normal;font-size:11.5px;padding:0 8px;line-height:22px;color:#fff;white-space:nowrap}
+.tx2{display:flex;justify-content:space-between;font-size:11.5px;color:var(--mu)}.story{margin:0 0 16px}.storybody{padding:0 16px 16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.storybox{border:1px solid var(--ln);background:var(--bg);border-radius:9px;padding:12px}.storybox h3{margin:0 0 8px;font-size:13px}.storybox p{margin:4px 0;color:var(--mu);font-size:12.5px}.live{color:var(--ac);font-size:12px}.map{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:9px}.map span{border:1px solid var(--ln);border-radius:5px;padding:7px 4px;text-align:center;font-size:11px;color:var(--mu);background:var(--sf)}.map span.target{background:var(--acb);border-color:var(--ac);color:var(--ac);font-weight:700}.voice{border-left:3px solid var(--in);padding:7px 10px;background:var(--inb);border-radius:0 6px 6px 0;font-size:12px}.steps{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 14px}.steps span{border:1px solid var(--ln);border-radius:20px;padding:3px 9px;color:var(--mu);font-size:11.5px}.steps span.on{background:var(--acb);color:var(--ac);border-color:var(--ac)}
+.mg table{min-width:0}
+.mg td,.mg th{padding:10px 16px}
+#cur{position:fixed;left:0;top:0;z-index:40;pointer-events:none;transition:transform .85s cubic-bezier(.4,0,.2,1);display:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+body.demo #cur{display:block}
+body.demo main,body.demo aside{pointer-events:none}
+body.demo main{padding-bottom:150px}
+.rp{position:fixed;z-index:39;width:34px;height:34px;margin:-6px 0 0 -8px;border-radius:50%;border:2px solid var(--ac);pointer-events:none;animation:rp .6s ease-out forwards}
+@keyframes rp{from{transform:scale(.3);opacity:1}to{transform:scale(1.6);opacity:0}}
+body.guide .card{opacity:.28;transition:opacity .25s}
+body.guide .card.hl{opacity:1;box-shadow:0 0 0 2px var(--ac)}
+body.guide main{padding-bottom:210px}
+#gd,#dm{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));width:min(720px,calc(100% - 24px));background:var(--sf);border:1px solid var(--ln);border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.2);padding:14px 16px;z-index:20}
+#gd[hidden],#dm[hidden]{display:none}
+.gt{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.gn{background:var(--ac);color:#fff;border-radius:20px;font-size:12px;padding:1px 10px}
+#gd p{margin:8px 0 12px;color:var(--mu);font-size:13px;line-height:1.6}
+.gc{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.gc i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ln);margin-right:5px}
+.gc i.on{background:var(--ac)}
+@media(max-width:1000px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.cols,.in4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.app{grid-template-columns:1fr}aside{display:none}main{padding:16px}.storybody{grid-template-columns:1fr}}
+.taskcheck{display:flex;align-items:flex-start;gap:9px;padding:10px 0 3px;font-size:13px;font-weight:500;cursor:pointer}.taskcheck input{width:18px;height:18px;margin:1px 0 0;accent-color:var(--ac);cursor:pointer;flex:none}.rec li.isdone .taskcheck span{text-decoration:line-through;color:var(--mu)}.streetmap,.floorplan{overflow:hidden;border:1px solid var(--ln);border-radius:8px;background:#f5f6f2;margin:10px 0}.streetmap svg,.floorplan svg{display:block;width:100%;height:auto}.maplegend{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:8px 10px;font-size:11.5px;color:var(--mu);background:var(--sf)}.maplegend b{color:var(--ac);margin-left:auto}.truckdot{display:inline-block;width:9px;height:9px;background:var(--ac);border-radius:50%;margin-right:5px}
+
+/* WORK:IN menu screens and guided analysis */
+.app{grid-template-columns:232px minmax(0,1fr)} aside{position:sticky;top:0;height:100vh;padding:24px 14px}.logo{padding:4px 10px 30px;font-size:16px}nav{display:grid;gap:5px}.nav-item{width:100%;display:flex;align-items:center;gap:11px;border:0;background:transparent;color:var(--sdt);padding:11px 12px;text-align:left;font-size:13.5px;border-radius:8px}.nav-item:hover,.nav-item.on{background:rgba(255,255,255,.1);color:#fff}.nav-icon{width:20px;text-align:center;font-size:17px}main{max-width:1500px;width:100%;margin:0 auto;padding:28px 34px 48px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:25px}.topbar h1{font-size:25px;letter-spacing:-.5px}.eyebrow{font-size:10px;letter-spacing:1.4px;color:var(--ac);font-weight:700}.top-actions{display:flex;align-items:center;gap:12px}.screen{display:none}.screen.active{display:block;animation:screen-in .2s ease-out}@keyframes screen-in{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:none}}.screen-container{min-height:65vh}.welcome{display:flex;align-items:center;justify-content:space-between;padding:24px 26px;background:linear-gradient(115deg,var(--acb),var(--sf) 75%);border:1px solid var(--ln);border-radius:14px;margin-bottom:16px}.welcome h2,.screen-intro h2{font-size:19px;margin:4px 0}.welcome p,.screen-intro p{margin:4px 0 0;color:var(--mu)}.kpis{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.kpi{padding:18px}.kpi strong{font-size:27px}.dashboard-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;margin-top:14px}.dash-focus,.dash-notices{min-height:225px}.focus-row{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-bottom:1px solid var(--ln)}.focus-row:last-child{border:0}.focus-num{width:25px;height:25px;background:var(--acb);color:var(--ac);border-radius:50%;display:grid;place-items:center;font-weight:700;flex:none}.focus-row small,.notice-list small{display:block;color:var(--mu);margin-top:3px}.text-btn,.dashboard-foot button{border:0;background:transparent;color:var(--ac)}.notice-list{list-style:none;padding:2px 16px;margin:0}.notice-list li{display:flex;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid var(--ln)}.notice-list li:last-child{border:0}.notice-list li>span:nth-child(2){flex:1}.notice-dot{width:9px;height:9px;border-radius:50%;background:var(--wn);flex:none}.notice-dot.blue{background:var(--in)}.dashboard-foot{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:12px;padding:15px 4px}.screen-intro{margin:4px 0 18px}.screen-stack{display:grid;gap:14px}.screen>.card{margin-bottom:14px}.note-card{padding:14px 16px;display:flex;gap:14px;color:var(--mu);font-size:12.5px}.note-card b{color:var(--ac);white-space:nowrap}.screen-hint{font-size:12px;color:var(--mu);margin:8px 2px}.ai-alert{display:block;height:auto;min-height:0;color:var(--tx);position:fixed;z-index:60;right:22px;top:22px;width:min(410px,calc(100vw - 30px));background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:16px;box-shadow:0 16px 48px rgba(16,24,32,.22)}.ai-alert[hidden]{display:none}.alert-head,.alert-head>div,.alert-meta{display:flex;align-items:center;justify-content:space-between;gap:10px}.alert-head>div{justify-content:flex-start}.alert-head button{font-size:20px;border:0;background:transparent;padding:0 5px}.ai-pulse{width:9px;height:9px;background:var(--ac);border-radius:50%;box-shadow:0 0 0 5px var(--acb)}.alert-meta{font-size:11.5px;color:var(--mu);margin:13px 0 7px}.alert-meta b{color:var(--ac);font-size:14px}.alert-progress{height:6px;border-radius:5px;background:var(--ln);overflow:hidden}.alert-progress i{display:block;width:0;height:100%;background:var(--ac);transition:width .35s}.analysis-steps{list-style:none;margin:12px 0;padding:0;display:grid;gap:8px}.analysis-steps li{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:start;font-size:11.5px;color:var(--mu)}.step-mark{width:19px;height:19px;border:1px solid var(--ln);border-radius:50%;display:grid;place-items:center;font-size:10px}.analysis-steps li.complete .step-mark{background:var(--acb);border-color:var(--ac);color:var(--ac)}.analysis-steps li.current{color:var(--tx);font-weight:700}.analysis-steps li.current .step-mark{border-color:var(--ac);color:var(--ac)}.step-state{font-size:10px;white-space:nowrap}.demo-note{display:block;color:var(--mu);border-top:1px solid var(--ln);padding-top:10px}.seg span{white-space:nowrap}.story{display:none!important}.flow{display:none!important}
+@media(max-width:900px){.app{grid-template-columns:190px 1fr}.dashboard-grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}main{padding:22px 20px}}
+@media(max-width:680px){.app{grid-template-columns:1fr}aside{position:sticky;z-index:30;height:auto;min-height:0;padding:8px;background:var(--sd)}.logo{display:none}nav{display:flex;overflow:auto;gap:3px}.nav-item{width:auto;min-width:max-content;justify-content:center;padding:9px 10px;font-size:12px}.nav-icon{display:none}.store{display:none}main{padding:18px 14px 30px}.topbar{align-items:flex-start;flex-direction:column}.top-actions{width:100%;justify-content:space-between}.seg span{padding:5px 7px;font-size:11px}.welcome{padding:18px;gap:10px}.welcome h2{font-size:17px}.welcome p{font-size:12px}.dashboard-foot{align-items:flex-start;gap:6px;flex-direction:column}.in4,.cols{grid-template-columns:1fr 1fr}}
+
+.logistics-preview{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}.map-card{overflow:hidden}.map-caption{padding:10px 16px 0;color:var(--mu);font-size:12px}.map-card .streetmap,.map-card .floorplan{margin:10px 16px 0}.map-card .maplegend{margin:0 16px 12px;border:1px solid var(--ln);border-top:0;border-radius:0 0 8px 8px}.map-card .maplegend b{font-size:10px}.logistics-preview .hd{padding-bottom:10px}@media(max-width:1000px){.logistics-preview{grid-template-columns:1fr}}
+.logo i{background:#ffd400!important;color:#111!important;font-weight:800}.product-row{cursor:pointer}.product-row:hover,.product-row:focus{background:rgba(255,212,0,.13);outline:2px solid #d2a900;outline-offset:-2px}.product-row.selected{background:#fff2b4}.product-map-card{margin-top:14px}.product-map-layout{padding:12px 16px 16px}.product-map-layout .floorplan{margin:0}.product-map-layout svg{max-height:380px}.product-zone{fill:transparent;stroke:transparent;stroke-width:3;pointer-events:none;transition:fill .18s,stroke .18s}.product-zone.selected{fill:#ffd400;fill-opacity:.52;stroke:#171717;stroke-dasharray:7 4}.product-location-info{margin-top:12px;padding:13px 15px;border-radius:9px;background:#fff8d8;border:1px solid #ead67c;display:flex;gap:12px;align-items:flex-start}.location-pin{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#171717;color:#ffd400;font-size:19px;flex:none}.product-location-info b{font-size:13px}.product-location-info p{margin:3px 0;color:#242424;font-size:13px}.product-location-info small{color:#625a3d;font-size:11.5px}.product-map-layout .maplegend{display:none}@media(max-width:680px){.product-map-layout{padding:10px}.product-map-layout .floorplan{margin:0}.product-map-layout svg{max-height:none}}
+
+</style>
+</head>
+<body>
+<div class="app">
+<aside>
+<div class="logo"><i>W</i>WORK:IN</div>
+<nav aria-label="주요 메뉴">
+<button class="nav-item on" type="button" data-page="dashboard"><span class="nav-icon">▦</span>대시보드</button>
+<button class="nav-item" type="button" data-page="handover"><span class="nav-icon">⇄</span>인수인계</button>
+<button class="nav-item" type="button" data-page="status"><span class="nav-icon">☷</span>업무 현황</button>
+<button class="nav-item" type="button" data-page="product"><span class="nav-icon">⌕</span>상품 정보</button>
+<button class="nav-item" type="button" data-page="priority"><span class="nav-icon">↗</span>AI 우선순위</button>
+<button class="nav-item" type="button" data-page="shift"><span class="nav-icon">▣</span>근무 관리</button>
+</nav>
+<div class="store"><b>노브랜드 강서가양점 (시연용)</b>오전조 · 08:00–16:00</div>
+</aside>
+<main><header class="topbar"><div><div class="eyebrow">WORK:IN · 노브랜드 매장 운영</div><h1 id="page-title">대시보드</h1><div class="sub" id="date"></div></div><div class="top-actions"><div class="seg" id="seg"><span data-s="am">오전조 08:00–16:00</span><span data-s="pm">오후조 14:30–22:30</span></div><button class="pri" id="gs">시연 시작</button></div></header><div class="screen-container"><section class="screen active" data-screen="dashboard">
+<div class="welcome"><div><span class="eyebrow">TODAY AT A GLANCE</span><h2>오늘의 매장 업무</h2><p>현재 매장 상태와 먼저 확인할 업무를 한눈에 확인하세요.</p></div><button id="gv">AI 매장 스캔</button></div>
+<section class="kpis" id="kpis"></section>
+<section class="logistics-preview"><div class="card map-card"><div class="hd"><h2>입고 차량 이동 현황</h2><span class="b prog">시연 중</span></div><div class="map-caption">냉장·냉동 18박스 · 차량 82 · 도착 예정 09:18</div><div class="streetmap"><svg viewBox="0 0 640 260" role="img" aria-label="매장으로 이동하는 시연용 입고 차량 지도"><rect width="640" height="260" fill="#e8eee5"/><g fill="#d8e4d2"><path d="M0 0h135v80H0zM500 0h140v86H500zM0 195h115v65H0zM520 190h120v70H520z"/></g><g fill="#f3eadc" stroke="#d8d0c5" stroke-width="2"><rect x="22" y="18" width="90" height="42"/><rect x="520" y="18" width="92" height="50"/><rect x="25" y="207" width="75" height="38"/><rect x="535" y="205" width="76" height="40"/><rect x="195" y="20" width="110" height="44"/><rect x="345" y="205" width="92" height="38"/></g><g fill="none" stroke="#fff" stroke-width="28"><path d="M-10 132H650M155 -15v290M465 -15v290"/></g><g fill="none" stroke="#c8c3b9" stroke-width="2"><path d="M-10 116H650M-10 148H650M138 -15v290M172 -15v290M448 -15v290M482 -15v290"/></g><path d="M62 218 C135 218 150 174 230 174 S325 100 420 100 S515 70 570 70" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/><path id="truck-route" d="M62 218 C135 218 150 174 230 174 S325 100 420 100 S515 70 570 70" fill="none" stroke="#20aaa0" stroke-width="5" stroke-dasharray="9 8" stroke-linecap="round"/><circle cx="570" cy="70" r="15" fill="#fff" stroke="#0f766e" stroke-width="4"/><text x="525" y="43" font-size="13" fill="#18212b">노브랜드 강서가양점 입고장</text><g><circle cx="62" cy="218" r="16" fill="#0f766e"/><text x="62" y="224" text-anchor="middle" font-size="16" fill="#fff">🚚</text><animateMotion dur="10s" repeatCount="indefinite" rotate="auto"><mpath href="#truck-route"/></animateMotion></g><g fill="#667085" font-size="12"><text x="22" y="103">공항대로</text><text x="180" y="245">가양역 방면</text><text x="480" y="170">매장 진입로</text></g></svg></div><div class="maplegend"><span><i class="truckdot"></i>입고 차량 82</span><span>경로 2.4km</span><b>GPS 연동 전 · 시연용 이동 경로</b></div></div>
+<div class="card map-card"><div class="hd"><h2>매장 진열 위치</h2><span class="m">AI Vision 분석 예시</span></div><div class="map-caption">냉동 만두 6박스 · 추천 매대 위치 강조</div><div class="floorplan"><svg viewBox="0 0 600 300" role="img" aria-label="구역별 매장 평면도와 추천 진열 위치"><rect x="4" y="4" width="592" height="292" rx="8" fill="#f8f8f5" stroke="#a9adb0" stroke-width="5"/><path d="M4 58H596M4 245H596M82 4V296M518 4V296" stroke="#a9adb0" stroke-width="3"/><g fill="#e7e8e8" stroke="#9ba1a5" stroke-width="2"><rect x="112" y="84" width="42" height="22"/><rect x="174" y="84" width="42" height="22"/><rect x="236" y="84" width="42" height="22"/><rect x="298" y="84" width="42" height="22"/><rect x="360" y="84" width="42" height="22"/><rect x="422" y="84" width="42" height="22"/><rect x="112" y="130" width="42" height="22"/><rect x="174" y="130" width="42" height="22"/><rect x="236" y="130" width="42" height="22"/><rect x="298" y="130" width="42" height="22"/><rect x="360" y="130" width="42" height="22"/><rect x="422" y="130" width="42" height="22"/><rect x="112" y="176" width="42" height="22"/><rect x="174" y="176" width="42" height="22"/><rect x="236" y="176" width="42" height="22"/><rect x="298" y="176" width="42" height="22"/><rect x="360" y="176" width="42" height="22"/><rect x="422" y="176" width="42" height="22"/></g><g fill="#35404a" font-size="13" text-anchor="middle"><text x="42" y="34">신선·냉장</text><text x="550" y="34">음료·후방</text><text x="43" y="112">베이커리</text><text x="43" y="198">입구</text><text x="550" y="130">농산물</text><text x="550" y="208">과일</text><text x="292" y="73">메인 진열 통로</text></g><rect x="287" y="169" width="52" height="38" rx="5" fill="#c9eee8" stroke="#0f766e" stroke-width="4"/><text x="313" y="185" text-anchor="middle" font-size="10" fill="#0f766e">냉동</text><text x="313" y="199" text-anchor="middle" font-size="10" fill="#0f766e">만두 6박스</text><path d="M45 220 C125 220 130 223 205 223 S260 215 313 210" fill="none" stroke="#e65f32" stroke-width="4" stroke-dasharray="7 5"/><text x="365" y="228" font-size="11" fill="#c74b24">추천 진열 경로</text></svg></div><div class="maplegend"><span>매장 평면도 · 구역별 위치</span><b>추천 위치는 직원 확인 필요</b></div></div></section>
+<div class="dashboard-grid"><section class="card dash-focus"><div class="hd"><h2>먼저 확인할 업무</h2><button class="text-btn" data-goto="priority">전체 보기 →</button></div><div id="dash-task-list"></div></section>
+<section class="card dash-notices"><div class="hd"><h2>주요 알림</h2><span class="m">오늘 확인 필요</span></div><ul class="notice-list"><li><span class="notice-dot warn"></span><span><b>냉동식품 진열</b><small>진행률 60% · 보충 여부 확인 필요</small></span><span class="b check">확인 필요</span></li><li><span class="notice-dot blue"></span><span><b>행사 상품 위치 변경</b><small>입구 행사 매대 · 오늘 적용</small></span><span class="b prog">변경</span></li></ul></section></div>
+<div class="dashboard-foot"><span>AI 제안은 시연용 가상 데이터입니다. 현장 확인 후 업무 상태를 확정하세요.</span><button data-goto="status">업무 현황 확인 →</button></div>
+</section>
+<section class="screen" data-screen="handover"><div class="screen-intro"><h2>교대 정보를 확인하고 전달합니다</h2><p>전 근무조 기록을 확인한 뒤, 다음 근무조에 전달할 내용을 검토하세요.</p></div><div class="screen-stack"><section class="card hero" id="incoming"></section><section class="card" id="handover"><div class="hd"><h2 id="ot">다음 근무자에게 전달</h2><span class="m" id="repst"></span></div>
+<div class="rep" id="rep"></div><div class="storybody"><div class="storybox"><h3>자리 비움 · 교대 시 현장 스캔</h3><p>매장을 다시 스캔해 완료·진행 중·미착수 업무를 자동 확인합니다.</p><div class="voice">🎙 음성 메모: “냉동 만두 2박스는 도착이 늦어 내일 오전 진열 부탁해요.”<br><b>생성형 AI 인수인계:</b> 입고 지연 상품 2박스, 내일 오전 진열 필요</div></div><div class="storybox"><h3>다음 근무조 맞춤 전달</h3><p>오전조 → 오후조: 남은 일과 고객 요청을 우선순위로 정리해 전달</p><p>오후조 → 다음 날 오전조: 발주·물류 시스템의 입고 예정과 연결</p><p><b>퇴근 버튼</b>을 누르면 내일 전달할 인수인계 초안도 자동 생성</p></div></div>
+<div class="foot"><span id="ft"></span><span><button id="gen">다시 생성</button> <button class="pri" id="send">확인 후 전달</button></span></div>
+<div class="demo">화면 속 차량 추적·AI 분석·음성 입력·외부 시스템 연동은 서비스 흐름을 설명하기 위한 시연용 예시입니다.</div></section></div></section>
+<section class="screen" data-screen="status"><div class="screen-intro"><h2>구역별 진행 상황</h2><p>완료·진행 중·확인 필요 업무와 분석 근거를 확인합니다.</p></div><section class="card" id="status"><div class="hd"><h2>구역별 업무 현황</h2><span class="m">AI 비전 · 체크리스트 · 직원 입력 종합</span></div>
+<div class="wrap"><table><thead><tr><th>구역</th><th>진행률</th><th>상태</th><th>출처</th><th></th></tr></thead><tbody id="rows"></tbody></table></div></section><div class="card note-card"><b>분석 근거</b><span>AI Vision은 보이는 진열 상태를 확인합니다. 완료 여부는 직원 체크리스트와 POS·재고·물류 데이터를 함께 대조하고, 불확실한 항목은 직원 확인이 필요합니다.</span></div></section>
+<section class="screen" data-screen="product"><div class="screen-intro"><h2>상품 위치와 변경 정보</h2><p>상품명으로 현재 위치, 이전 위치, 행사 변경을 검색합니다.</p></div><section class="card" id="product"><div class="hd"><h2>상품 정보 · 행사 및 진열 변경</h2><span class="m">상품명으로 현재 위치와 변경 내역 확인</span></div>
+<div class="srch"><input id="q" type="search" placeholder="상품명을 검색하세요 (예: 컵라면, 입구)"><div class="ch" id="ch"></div></div>
+<div class="wrap"><table><thead><tr><th>상품</th><th>구분</th><th>현재 위치</th><th>이전 위치</th><th>적용</th></tr></thead><tbody id="prod"></tbody></table></div></section><section class="card product-map-card"><div class="hd"><h2>상품 위치 안내</h2><span class="m">노브랜드 강서가양점 평면도 · 시연용</span></div><div class="product-map-layout"><div class="floorplan"><svg id="product-store-map" viewBox="0 0 600 300" role="img" aria-label="구역별 매장 평면도와 추천 진열 위치"><rect x="4" y="4" width="592" height="292" rx="8" fill="#f8f8f5" stroke="#a9adb0" stroke-width="5"/><path d="M4 58H596M4 245H596M82 4V296M518 4V296" stroke="#a9adb0" stroke-width="3"/><g fill="#e7e8e8" stroke="#9ba1a5" stroke-width="2"><rect x="112" y="84" width="42" height="22"/><rect x="174" y="84" width="42" height="22"/><rect x="236" y="84" width="42" height="22"/><rect x="298" y="84" width="42" height="22"/><rect x="360" y="84" width="42" height="22"/><rect x="422" y="84" width="42" height="22"/><rect x="112" y="130" width="42" height="22"/><rect x="174" y="130" width="42" height="22"/><rect x="236" y="130" width="42" height="22"/><rect x="298" y="130" width="42" height="22"/><rect x="360" y="130" width="42" height="22"/><rect x="422" y="130" width="42" height="22"/><rect x="112" y="176" width="42" height="22"/><rect x="174" y="176" width="42" height="22"/><rect x="236" y="176" width="42" height="22"/><rect x="298" y="176" width="42" height="22"/><rect x="360" y="176" width="42" height="22"/><rect x="422" y="176" width="42" height="22"/></g><g fill="#35404a" font-size="13" text-anchor="middle"><text x="42" y="34">신선·냉장</text><text x="550" y="34">음료·후방</text><text x="43" y="112">베이커리</text><text x="43" y="198">입구</text><text x="550" y="130">농산물</text><text x="550" y="208">과일</text><text x="292" y="73">메인 진열 통로</text></g><rect x="287" y="169" width="52" height="38" rx="5" fill="#c9eee8" stroke="#0f766e" stroke-width="4"/><text x="313" y="185" text-anchor="middle" font-size="10" fill="#0f766e">냉동</text><text x="313" y="199" text-anchor="middle" font-size="10" fill="#0f766e">만두 6박스</text><path d="M45 220 C125 220 130 223 205 223 S260 215 313 210" fill="none" stroke="#e65f32" stroke-width="4" stroke-dasharray="7 5"/><text x="365" y="228" font-size="11" fill="#c74b24">추천 진열 경로</text><g class="product-hotspots" aria-hidden="true">
+<rect class="product-zone" data-zone="chilled" x="90" y="58" width="190" height="70" rx="8"/>
+<rect class="product-zone" data-zone="frozen" x="270" y="155" width="95" height="65" rx="8"/>
+<rect class="product-zone" data-zone="entry" x="8" y="228" width="82" height="62" rx="8"/>
+<rect class="product-zone" data-zone="checkout" x="8" y="150" width="78" height="65" rx="8"/>
+<rect class="product-zone" data-zone="bakery" x="8" y="68" width="78" height="68" rx="8"/>
+<rect class="product-zone" data-zone="back" x="518" y="58" width="78" height="82" rx="8"/>
+<rect class="product-zone" data-zone="produce" x="518" y="120" width="78" height="72" rx="8"/>
+</g></svg></div><div class="product-location-info" id="product-location-info" aria-live="polite"><span class="location-pin">⌖</span><div><b id="product-map-name">상품 행을 선택하세요</b><p id="product-map-location">상품을 누르면 현재 위치와 매장 지도 구역을 표시합니다.</p><small id="product-map-extra">지도 표시는 시연용 매장 배치 기준입니다.</small></div></div></div></section><p class="screen-hint">상품 검색은 시연용 상품 정보에서 결과를 찾습니다. 검색은 RAG·검색 방식으로 표시되며, 가격표나 행사 안내문 문자를 읽는 경우에는 OCR을 사용할 수 있습니다.</p></section>
+<section class="screen" data-screen="priority"><div class="screen-intro"><h2>AI 업무 우선순위</h2><p>업무 긴급도, 고객 영향, 혼잡도, 가용 인원을 바탕으로 처리 순서를 제안합니다.</p></div><section class="card" id="tasks"><div class="hd"><h2>AI 업무 우선순위 추천</h2><span class="m">혼잡도 · 입고 시각 · 고객 영향 종합</span></div><div class="stf"><div class="r"><span>현재 매장 혼잡도<small>입구 센서·매장 스캔 기준</small></span><span class="b check">보통 · 42%</span></div><div class="r"><span>혼잡도 반영 안내</span><span class="nt">고객 동선 확보를 위해 통로 진열은 한산 시간대로 조정</span></div></div>
+<div class="stf" id="staff"></div>
+<div class="cap">추천 기준: 상품 특성 · 처리 시한 · 고객 영향 · 가용 인원</div>
+<ol class="rec" id="rec"></ol></section><p class="screen-hint">최종 업무 순서와 담당자는 직원 또는 관리자가 확인합니다.</p></section>
+<section class="screen" data-screen="shift"><div class="screen-intro"><h2>근무 및 교대 관리</h2><p>근무 시간, 인수인계 완료 여부, 다음 교대 정보를 확인합니다.</p></div><section class="card" id="shift"><div class="hd"><h2>근무조별 인수인계 현황</h2><span class="m">점장 보기</span></div>
+<div class="tw"><div class="tr"><i style="left:0;width:55.2%;background:var(--ac)">오전조 08:00–16:00</i></div><div class="tr"><i style="left:44.8%;width:55.2%;background:var(--in)">오후조 14:30–22:30</i></div><div class="tr"><i style="left:44.8%;width:10.3%;background:var(--wn)"></i></div><div class="tx2"><span>08:00</span><span>대면 인수 14:30–16:00</span><span>22:30</span></div></div>
+<div class="mg"><table><tbody id="mg"></tbody></table></div></section></section></div></main>
+</div>
+<aside id="ai-alert" class="ai-alert" role="status" aria-live="polite" hidden><div class="alert-head"><div><span class="ai-pulse"></span><b id="alert-title">매장 CCTV 영상 분석</b></div><button id="alert-close" aria-label="알림 닫기">×</button></div><div class="alert-meta"><span id="alert-tech">AI Vision · 매장 내 진열 상태 확인</span><b id="alert-percent">0%</b></div><div class="alert-progress"><i id="alert-fill"></i></div><ol class="analysis-steps" id="analysis-steps"></ol><small class="demo-note">시연용 가상 분석 화면 · 실제 CCTV 연동 및 AI 처리 결과가 아닙니다.</small></aside>
+<div id="cur"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 3l14 8-6 2-3 6z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+<div id="dm" hidden><div class="gt"><span class="gn" id="dstep"></span><b id="dcap"></b></div><div class="gc" style="margin-top:12px"><span style="flex:1;min-width:80px;height:4px;background:var(--ln);border-radius:3px;overflow:hidden"><i id="dfill" style="display:block;height:100%;width:0;background:var(--ac);transition:width .5s"></i></span><span><button id="dpause">일시정지</button> <button id="drep">처음부터</button> <button class="pri" id="dtry">직접 해보기</button></span></div></div>
+<div id="gd" hidden><div class="gt"><span class="gn" id="gnum"></span><b id="gtt"></b><span class="b check" id="gtag"></span></div><p id="gtx"></p><div class="gc"><span id="gdots"></span><span><button id="gexit">나가기</button> <button id="gprev">이전</button> <button class="pri" id="gnext">다음</button></span></div></div>
+<script>
+var Z=[
+{n:'신선·냉동 입고',p:100,s:'done',t:'입고·분류 완료',src:'체크리스트'},
+{n:'계산대 주변 정리',p:100,s:'done',t:'정리 완료',src:'사진 확인'},
+{n:'냉동식품 진열',p:60,s:'check',t:'앞줄 박스 1~2개 남음, 보충 여유 확인 필요',src:'AI 비전',lv:3,rs:'냉동 상품은 보충이 늦어지면 품질과 판매에 바로 영향을 줍니다.'},
+{n:'유통기한 임박 분리',p:50,s:'check',t:'8개 분리, 할인 라벨 처리 대기',src:'직원 입력',lv:2,rs:'할인·폐기 처리 시한이 있어 오늘 안에 라벨 처리가 필요합니다.'},
+{n:'드라이 상품 진열',p:70,s:'prog',t:'통로 대차 2대 진열 대기',src:'AI 비전',lv:2,rs:'통로 대차가 고객 동선을 막을 수 있어 먼저 정리가 필요합니다.'},
+{n:'행사 상품 위치 확인',p:100,s:'done',t:'입구 행사 매대 변경 반영 완료',src:'직원 체크',lv:1,rs:'위치가 바뀌어 고객 문의가 늘 수 있어 현장 확인이 필요합니다.'},
+{n:'후방 폐박스·대차 정리',p:20,s:'todo',t:'폐박스 적치, 대차 미반납',src:'AI 비전',lv:1,rs:'다음 입고 동선 확보에 필요하지만 즉시 영향은 낮습니다.'}];
+var P=[
+{n:'봄 한정 컵라면 세트',k:'행사',to:'입구 행사 매대',from:'라면 코너 3번 선반',d:'오늘'},
+{n:'냉동 만두 1+1',k:'행사',to:'냉동 코너 앞 행사 박스',from:'냉동 코너 5번',d:'오늘'},
+{n:'딸기 요거트',k:'신규',to:'냉장 유제품 2열',from:'-',d:'어제'},
+{n:'종량제 봉투',k:'위치',to:'계산대 좌측 하단',from:'계산대 우측',d:'3일 전'},
+{n:'오트밀크 1L',k:'신규',to:'냉장 음료 1열',from:'-',d:'2일 전'},
+{n:'생수 2L 6입',k:'none',to:'후방 음료 구역 B',from:'-',d:'-'},
+{n:'식빵',k:'none',to:'계산대 옆 베이커리 매대',from:'-',d:'-'}];
+var KC={행사:'check',신규:'prog',위치:'todo',none:'none'},KL={행사:'행사',신규:'신규',위치:'위치 변경',none:'변경 없음'};
+var S=[{n:'직원 A',r:'계산대',a:false},{n:'직원 B',r:'냉동 진열',a:true},{n:'직원 C',r:'드라이 진열',a:true}];
+var LV={3:['긴급','todo'],2:['높음','check'],1:['보통','prog']};
+var SH={
+am:{l:'오전조',t:'08:00–16:00',o:'16:00',nx:'오후조',inFace:false,outFace:true,
+inSrc:'전날 오후조(22:30 퇴근)가 남긴 기록',
+todo:['냉동식품 진열 미완료','유통기한 임박 상품 할인 라벨 처리','행사 상품 위치 변경 확인'],cust:['종량제 봉투 위치 문의가 여러 번 있었음','후방 대차 1대가 통로 쪽에 남아 있음']},
+pm:{l:'오후조',t:'14:30–22:30',o:'22:30',nx:'오전조',inFace:true,outFace:false,
+inSrc:'오전조(16:00 퇴근)가 남긴 기록',
+todo:['드라이 상품 진열 일부 미완료','후방 폐박스·대차 정리'],cust:['생수 2L 재입고 문의가 있었음']}};
+var L={done:'완료',prog:'진행 중',check:'확인 필요',todo:'미완료'};
+var sh='am',rep='draft',ack=false,flt='all',q='';
+var $=function(i){return document.getElementById(i)};
+function openZ(){return Z.filter(function(z){return z.s!=='done'})}
+function topZ(){return openZ().map(function(z,i){return{z:z,i:i}}).sort(function(a,b){return(b.z.lv-a.z.lv)||(a.i-b.i)}).map(function(x){return x.z})}
+(function(){var av=S.filter(function(s){return s.a});topZ().forEach(function(z,i){z.who=av[i%av.length].n;z.ok=false})})();
+function render(){
+var o=openZ(),h=SH[sh],t=topZ(),pTasks=Z.filter(function(z){return z.lv}).map(function(z,i){return{z:z,i:i}}).sort(function(a,b){return(b.z.lv-a.z.lv)||(a.i-b.i)}).map(function(x){return x.z}),okc=o.filter(function(z){return z.ok}).length,ck=Z.filter(function(z){return z.s==='check'}).length;
+var avg=Math.round(Z.reduce(function(a,z){return a+z.p},0)/Z.length);
+Array.prototype.forEach.call($('seg').children,function(e){e.className=e.getAttribute('data-s')===sh?'on':''});
+$('dash-task-list').innerHTML=topZ().slice(0,3).map(function(z,i){return '<div class="focus-row"><span class="focus-num">'+(i+1)+'</span><span><b>'+z.n+'</b><small>'+z.p+'% 진행 · '+z.t+'</small></span><span class="b '+LV[z.lv][1]+'">'+LV[z.lv][0]+'</span></div>'}).join('')||'<div class="focus-row">진행 중인 업무가 없습니다.</div>';
+$('date').textContent='노브랜드 강서가양점 · '+new Date().toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric'})+' · '+h.t+' · 시연용 가상 데이터';
+$('kpis').innerHTML=[['완료 업무',(Z.length-o.length)+'건','전체 '+Z.length+'개 업무 기준'],['잔여 업무',o.length+'건','완료 '+(Z.length-o.length)+'건'],['확인 필요',ck+'건','직원 확인 후 처리'],['구역 평균 진행률',avg+'%','업무 데이터 기준']].map(function(k){return '<div class="card kpi"><small>'+k[0]+'</small><strong>'+k[1]+'</strong><em>'+k[2]+'</em></div>'}).join('');
+var chg=P.filter(function(p){return p.d==='오늘'}).map(function(p){return '<li>'+p.n+' → '+p.to+'</li>'}).join('')||'<li class="nt">없음</li>';
+var li=function(a){return a.map(function(x){return '<li>'+x+'</li>'}).join('')};
+$('incoming').innerHTML='<div class="hd"><h2>전 근무조 인수인계</h2><span><span class="b '+(ack?'done':'check')+'">'+(ack?'확인 완료':'확인 필요')+'</span> <button id="ack" '+(ack?'disabled':'')+'>내용 확인</button></span></div>'
++'<div class="in4" style="padding-bottom:6px"><div><h4>전 근무조 미완료 업무</h4><ul>'+li(h.todo)+'</ul></div><div><h4>고객 요청 · 특이사항</h4><ul>'+li(h.cust)+'</ul></div><div><h4>오늘 변경된 행사 · 상품 위치</h4><ul>'+chg+'</ul></div><div><h4>우선 처리할 업무</h4><ul>'+t.slice(0,3).map(function(z){return '<li>'+z.n+' <span class="b '+LV[z.lv][1]+'">'+LV[z.lv][0]+'</span></li>'}).join('')+'</ul></div></div>'
++'<div class="mode">'+h.inSrc+' · 직원 확인 후 처리 · '+(h.inFace?'<b>대면 인수 가능</b> (14:30–16:00, 오전조 퇴근 전)':'<b>대면 인수 불가</b> — 기록을 확인하는 방식으로 전달됩니다')+'</div>';
+$('rows').innerHTML=Z.map(function(z,i){return '<tr><td><div class="nm">'+z.n+'</div><div class="nt">'+z.t+'</div></td><td style="white-space:nowrap"><div class="bar"><i style="width:'+z.p+'%"></i></div><span class="pct">'+z.p+'%</span></td><td><span class="b '+z.s+'">'+L[z.s]+'</span></td><td class="src">'+z.src+'</td><td>'+(z.s==='done'?'':'<button data-i="'+i+'">완료 처리</button>')+'</td></tr>'}).join('');
+var qq=q.trim().toLowerCase(),pl=P.filter(function(p){return(flt==='all'||p.k===flt)&&(!qq||(p.n+p.to+p.from).toLowerCase().indexOf(qq)>-1)});
+$('prod').innerHTML=pl.length?pl.map(function(p){return '<tr class="product-row" data-pindex="'+P.indexOf(p)+'" tabindex="0" role="button" aria-label="'+p.n+' 위치 보기"><td class="nm">'+p.n+'</td><td><span class="b '+KC[p.k]+'">'+KL[p.k]+'</span></td><td>'+p.to+'</td><td class="arrow">'+p.from+'</td><td class="src">'+p.d+'</td></tr>'}).join(''):'<tr><td colspan="5" class="nt">검색 결과가 없습니다.</td></tr>';
+$('ch').innerHTML=[['all','전체'],['행사','행사'],['신규','신규'],['위치','위치 변경']].map(function(c){return '<button data-f="'+c[0]+'" class="'+(flt===c[0]?'on':'')+'">'+c[1]+'</button>'}).join('');
+$('staff').innerHTML=S.map(function(s){return '<div class="r"><span>'+s.n+'<small>'+s.r+'</small></span><span class="b '+(s.a?'done':'none')+'">'+(s.a?'배정 가능':'계산대 고정')+'</span></div>'}).join('');
+$('rec').innerHTML=pTasks.length?pTasks.map(function(z,i){var zi=Z.indexOf(z),done=z.s==='done';return '<li class="'+(done?'isdone':'')+'"><span class="rk">'+(i+1)+'</span><div style="flex:1"><label class="taskcheck"><input type="checkbox" data-task="'+zi+'" '+(done?'checked':'')+'><span>'+z.n+' <span class="b '+(done?'done':LV[z.lv][1])+'">'+(done?'완료':LV[z.lv][0])+'</span></span></label><div class="nt">'+(done?'체크 완료 · 업무 진행률에 반영됐습니다.':z.rs)+'</div><div class="as">AI 배정 제안 <select data-w="'+zi+'" '+(z.ok||done?'disabled':'')+'>'+S.map(function(s){return '<option'+(s.n===z.who?' selected':'')+'>'+s.n+'</option>'}).join('')+'</select>'+(done?'<span class="b done">완료</span>':z.ok?'<span class="b done">배정 확인</span>':'<button data-c="'+zi+'">배정 확인</button>')+'</div></div></li>'}).join(''):'<li class="nt">등록된 우선순위 업무가 없습니다.</li>';
+var inSt=ack?'<span class="b done">확인 완료</span>':'<span class="b check">확인 대기</span>',outSt='<span class="b '+(rep==='sent'?'done':'check')+'">'+(rep==='sent'?'전달 완료':'확인 대기')+'</span>';
+$('mg').innerHTML='<tr><td><div class="nm">'+(sh==='am'?'오후조 → 오전조':'오전조 → 오후조')+' (받는 쪽)</div><div class="nt">'+(h.inFace?'14:30–16:00 대면 인수 가능':'대면 인수 불가 · 기록 확인')+'</div></td><td>'+inSt+'</td></tr><tr><td><div class="nm">'+h.l+' → '+h.nx+' (넘기는 쪽)</div><div class="nt">'+(h.outFace?'14:30–16:00 대면 인수 가능':'대면 인수 불가 · 기록으로 전달')+'</div></td><td>'+outSt+'</td></tr>';
+$('ot').textContent='다음 근무자에게 전달 · '+h.nx;
+$('repst').textContent=rep==='sent'?'전달 완료':rep==='draft'?'초안 · 직원 확인 대기':'생성 중…';
+$('ft').textContent=h.o+' 퇴근 직원이 확인한 뒤 전달됩니다. '+(h.outFace?'14:30–16:00에는 대면으로도 인수할 수 있습니다.':'대면 인수가 어려워 기록으로 전달됩니다.');
+$('send').disabled=rep!=='draft';$('gen').disabled=rep==='loading';
+if(rep==='loading'){$('rep').innerHTML='<div class="sk" style="width:90%"></div><div class="sk" style="width:70%"></div><div class="sk" style="width:80%"></div>';return}
+var g=function(s){return Z.filter(function(z){return z.s===s}).map(function(z){return '<li>'+z.n+'</li>'}).join('')||'<li class="nt">없음</li>'},f=t[0];
+$('rep').innerHTML='<p class="sum">'+(f?(Z.length-o.length)+'개 구역은 완료됐고, '+o.length+'개 구역에 후속 작업이 남아 있습니다. <b>'+f.n+'</b>부터 확인해 주세요. ('+LV[f.lv][0]+')':'모든 구역의 업무가 완료됐습니다.')+'</p><p class="nb">오늘 변경된 행사·진열 정보 '+P.filter(function(p){return p.d==='오늘'}).length+'건 · 상품 정보에서 위치를 확인하세요.</p><div class="cols"><div><h4>완료</h4><ul>'+g('done')+'</ul></div><div><h4>진행 중</h4><ul>'+g('prog')+'</ul></div><div><h4>확인 필요</h4><ul>'+g('check')+'</ul></div><div><h4>미완료</h4><ul>'+g('todo')+'</ul></div></div>';
+}
+document.addEventListener('click',function(e){var a=e.target.closest('button')||e.target,v;
+if(a.id==='ack'){ack=true;render();return}
+if((v=a.getAttribute('data-i'))!==null){Z[v].p=100;Z[v].s='done';Z[v].t='완료 처리됨';rep='draft';render();return}
+if((v=a.getAttribute('data-c'))!==null){Z[v].ok=true;render();return}
+if((v=a.getAttribute('data-f'))){flt=v;render();return}
+if((v=a.getAttribute('data-s'))){sh=v;rep='draft';ack=false;render()}});
+document.addEventListener('change',function(e){var v=e.target.getAttribute('data-task');if(v!==null){var z=Z[Number(v)];if(e.target.checked){z.p=100;z.s='done';z.t='체크리스트 완료';z.src='직원 체크'}else{z.p=50;z.s='check';z.t='완료 확인 필요';z.src='직원 체크';z.ok=false}rep='draft';render();return}v=e.target.getAttribute('data-w');if(v!==null){Z[v].who=e.target.value;render()}});
+$('q').addEventListener('input',function(e){q=e.target.value;render()});
+$('gen').onclick=function(){rep='loading';render();setTimeout(function(){rep='draft';render()},700)};
+$('send').onclick=function(){rep='sent';render()};
+var G=[
+{s:'#incoming',sc:'#incoming',h:'출근 직후, 전 근무조 인수인계 확인',tag:'문제 ③ 교대 시 정보 전달',b:'미완료 업무, 고객 요청, 오늘 바뀐 행사 위치를 기록으로 먼저 받습니다. 오전조 출근 때는 전날 오후조와 대면이 불가해서 기록 확인이 핵심입니다.'},
+{s:'#kpis .card,#status',sc:'#status',h:'구역별 업무 현황으로 매장 상태 파악',tag:'문제 ① 제한된 인력, 여러 업무',b:'AI 비전, 체크리스트, 직원 입력을 종합해 진행률과 상태를 한 화면에 보여줍니다. AI가 판단하기 어려운 항목은 확인 필요로 분류합니다.'},
+{s:'#tasks',sc:'#tasks',h:'AI가 우선순위를 추천하고, 사람이 배정 확인',tag:'문제 ① 제한된 인력, 여러 업무',b:'긴급·높음·보통과 추천 이유를 보여주고, 가용 인원을 기준으로 담당자를 제안합니다. 최종 배정은 직원이나 관리자가 확인합니다.'},
+{s:'#product',sc:'#product',h:'고객 문의에는 상품 정보 검색',tag:'문제 ② 행사·상품 변경 정보 파악',b:'상품명으로 현재 위치, 이전 위치, 행사·신규·위치 변경 여부를 바로 확인합니다.',pre:'컵라면'},
+{s:'#handover,#shift',sc:'#handover',h:'퇴근 전, 다음 근무자에게 전달',tag:'문제 ③ 교대 시 정보 전달',b:'AI가 초안을 만들고 퇴근 직원이 확인한 뒤 전달합니다. 오후조 퇴근 후에는 대면 인수가 불가능해서 기록이 다음 날 오전조에게 이어집니다.'}];
+var gi=-1;
+function clr(){Array.prototype.forEach.call(document.querySelectorAll('.card.hl'),function(e){e.classList.remove('hl')})}
+function guide(i){
+if(i<0||i>=G.length)return;gi=i;var g=G[i];
+document.body.classList.add('guide');$('gd').hidden=false;
+if(i===0){sh='am';rep='draft';ack=false;flt='all'}
+q=g.pre||'';$('q').value=q;render();clr();
+Array.prototype.forEach.call(document.querySelectorAll(g.s),function(e){e.classList.add('hl')});
+document.querySelector(g.sc).scrollIntoView({behavior:'smooth',block:'start'});
+$('gnum').textContent=(i+1)+' / '+G.length;$('gtt').textContent=g.h;$('gtag').textContent=g.tag;$('gtx').textContent=g.b;
+$('gdots').innerHTML=G.map(function(x,j){return '<i class="'+(j===i?'on':'')+'"></i>'}).join('');
+$('gprev').disabled=i===0;$('gnext').textContent=i===G.length-1?'마치기':'다음';
+}
+function gend(){gi=-1;document.body.classList.remove('guide');$('gd').hidden=true;clr();q='';$('q').value='';render()}
+$('gs').onclick=function(){dstop();demo()};
+$('gexit').onclick=gend;
+$('gprev').onclick=function(){guide(gi-1)};
+$('gnext').onclick=function(){gi===G.length-1?gend():guide(gi+1)};
+var Z0=JSON.stringify(Z),cur=$('cur'),run=0,paused=false;
+function dsl(ms){return new Promise(function(res,rej){var my=run,t=0;(function k(){if(my!==run)return rej(0);if(t>=ms)return res();setTimeout(function(){if(!paused)t+=50;k()},50)})()})}
+async function dmv(s){var el=typeof s==='string'?document.querySelector(s):s;if(!el)return null;var pg=el.closest('.screen');if(pg)showPage(pg.getAttribute('data-screen'));el.scrollIntoView({behavior:'smooth',block:'center'});await dsl(750);var r=el.getBoundingClientRect(),w=r.width>260;cur.style.transform='translate('+(w?r.left+90:r.left+r.width/2)+'px,'+(w?r.top+Math.min(r.height/2,28):r.top+r.height/2)+'px)';await dsl(900);return el}
+async function dck(s){var el=await dmv(s);if(!el)return;await dsl(200);var p=document.createElement('div'),b=cur.getBoundingClientRect();p.className='rp';p.style.left=b.left+'px';p.style.top=b.top+'px';document.body.appendChild(p);setTimeout(function(){p.remove()},600);if(el.tagName==='INPUT')el.focus();else el.click();await dsl(500)}
+async function dty(el,txt){for(var i=1;i<=txt.length;i++){el.value=txt.slice(0,i);el.dispatchEvent(new Event('input'));await dsl(220)}}
+async function dst(n,c,f){$('dstep').textContent=n+' / 8';$('dcap').textContent=c;$('dfill').style.width=(n/8*100)+'%';await dsl(500);await f();await dsl(600)}
+function dstop(){run++;document.body.classList.remove('demo');$('dm').hidden=true}
+async function demo(){
+run++;paused=false;$('dpause').textContent='일시정지';$('dpause').hidden=false;
+Z=JSON.parse(Z0);sh='am';rep='draft';ack=false;flt='all';q='';$('q').value='';gi=-1;clr();document.body.classList.remove('guide');$('gd').hidden=true;
+document.body.classList.add('demo');$('dm').hidden=false;render();showPage('dashboard');
+cur.style.transform='translate('+innerWidth*.55+'px,'+innerHeight*.35+'px)';
+try{
+await dst(1,'오전조 출근 · 오늘 매장 운영을 시작합니다',async function(){showPage('dashboard');await dmv('.welcome');await dsl(1000)});
+await dst(2,'물류 입고 확인 · 입고 차량과 도착 예정 정보를 확인합니다',async function(){showPage('dashboard');await dmv('.logistics-preview .map-card:first-child');await dsl(1400)});
+await dst(3,'입고 상품 진열 · 매장 지도에서 추천 위치를 확인합니다',async function(){showPage('dashboard');await dmv('.logistics-preview .map-card:nth-child(2)');await dsl(1400)});
+await dst(4,'오전조 업무 현황 · 매장 재확인 후 진행 상태를 갱신합니다',async function(){await dmv('#rows tr:nth-child(3)');await dsl(700);await dck('#rows [data-i="2"]');await dsl(600)});
+await dst(5,'오전조 우선순위 · 혼잡도와 남은 업무를 확인합니다',async function(){await dmv('#tasks .stf');await dsl(700);await dmv('#rec select');await dsl(400);await dck('#rec [data-c]')});
+await dst(6,'오전조 마무리 · 확인한 업무와 특이사항을 오후조에 전달합니다',async function(){showPage('handover');await dmv('#handover');await dck('#gen');await dsl(1100);await dck('#send');await dsl(700)});
+await dst(7,'오후조 출근 · 오전조 인수인계 내용을 확인하고 업무를 이어받습니다',async function(){sh='pm';ack=false;rep='draft';render();showPage('handover');await dmv('#incoming');await dsl(700);await dck('#ack');await dsl(500)});
+await dst(8,'오후조 업무 이어하기 · 우선순위를 확인하고 다음 근무조 인계를 준비합니다',async function(){showPage('priority');await dmv('#tasks');await dsl(700);showPage('handover');await dck('#gen');await dsl(1000);await dck('#send');await dsl(800)});
+$('dstep').textContent='완료';$('dcap').textContent='오전조에서 오후조까지 시연이 끝났습니다. 모든 데이터는 가상이며, 직접 눌러 확인할 수 있습니다.';$('dfill').style.width='100%';
+document.body.classList.remove('demo');$('dpause').hidden=true;window.scrollTo({top:0,behavior:'smooth'});
+}catch(e){document.body.classList.remove('demo');$('dm').hidden=true;console.error('시연 재생 중 오류:',e)}
+}
+$('dpause').onclick=function(){paused=!paused;this.textContent=paused?'계속 재생':'일시정지'};
+$('drep').onclick=demo;$('gv').onclick=function(){gend();demo()};
+$('dtry').onclick=dstop;
+
+document.addEventListener('keydown',function(e){if(gi<0||/INPUT|SELECT/.test(e.target.tagName))return;
+if(e.key==='ArrowRight')$('gnext').click();else if(e.key==='ArrowLeft'&&gi>0)guide(gi-1);else if(e.key==='Escape')gend()});
+
+var pageNames={dashboard:'대시보드',handover:'인수인계',status:'업무 현황',product:'상품 정보',priority:'AI 우선순위',shift:'근무 관리'};
+function showPage(id){Array.prototype.forEach.call(document.querySelectorAll('.screen'),function(x){x.classList.toggle('active',x.getAttribute('data-screen')===id)});Array.prototype.forEach.call(document.querySelectorAll('.nav-item'),function(x){x.classList.toggle('on',x.getAttribute('data-page')===id)});$('page-title').textContent=pageNames[id]||'대시보드';window.scrollTo({top:0,behavior:'smooth'})}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-page],[data-goto]');if(!b)return;showPage(b.getAttribute('data-page')||b.getAttribute('data-goto'))});
+var analysisTitles=['매장 CCTV 영상 분석','상품 진열 상태 확인','업무 체크리스트 대조','업무 상태 업데이트'];
+var analysisTech=['AI Vision · 매장 내 진열 상태 확인','객체 인식 · 상품과 매대 상태 식별','데이터 연계 · 체크리스트 비교','상태 판별 · 직원 확인 대기'];
+var analysisNames=['CCTV 영상 수집','AI Vision 객체 및 진열 상태 분석','업무 체크리스트와 비교','업무 상태 및 인수인계 반영'];
+function analysis(pct,title,tech){$('ai-alert').hidden=false;$('alert-title').textContent=title||analysisTitles[0];$('alert-tech').textContent=tech||analysisTech[0];$('alert-percent').textContent=pct+'%';$('alert-fill').style.width=pct+'%';var cur=Math.min(3,Math.floor(pct/25));$('analysis-steps').innerHTML=analysisNames.map(function(n,i){var state=i<cur?'완료':i===cur?'진행 중':'대기';return '<li class="'+(i<cur?'complete':i===cur?'current':'')+'"><span class="step-mark">'+(i<cur?'✓':i+1)+'</span><span>'+n+'</span><span class="step-state">'+state+'</span></li>'}).join('')}
+function hideAnalysis(){$('ai-alert').hidden=true}
+$('alert-close').onclick=hideAnalysis;
+var oldDst=dst;dst=async function(n,c,f){var pct=Math.min(96,Math.round(n/8*100));analysis(pct,n===1?'매장 CCTV 영상 분석':n===6||n===8?'인수인계 요약 생성':n===5?'AI 업무 우선순위 추천':'AI 업무 분석',n===1?analysisTech[0]:n===4?analysisTech[2]:n===5?'업무 추천 로직 · 혼잡도와 가용 인력 반영':n>=6?'LLM · 업무 기록과 직원 메모 요약':'AI Vision · 체크리스트 · 매장 데이터 연계');return oldDst(n,c,f)};
+document.addEventListener('input',function(e){if(e.target.id==='q'){if(e.target.value.trim())analysis(42,'상품 정보 검색','RAG · 상품 위치와 매장 행사 정보 검색');else hideAnalysis()}});
+
+function productZone(p){var s=p.to;if(s.indexOf('냉동')>=0)return 'frozen';if(s.indexOf('냉장')>=0)return 'chilled';if(s.indexOf('입구')>=0)return 'entry';if(s.indexOf('계산대')>=0)return 'checkout';if(s.indexOf('베이커리')>=0)return 'bakery';if(s.indexOf('후방')>=0)return 'back';return 'produce'}
+function selectProduct(p){if(!p)return;var z=productZone(p);Array.prototype.forEach.call(document.querySelectorAll('#product-store-map .product-zone'),function(x){x.classList.toggle('selected',x.getAttribute('data-zone')===z)});$('product-map-name').textContent=p.n;$('product-map-location').textContent='현재 위치: '+p.to;$('product-map-extra').textContent=(p.from&&p.from!=='-'?'이전 위치: '+p.from+' · ':'')+(p.d==='-'?'변경 기록 없음':'적용 정보: '+p.d);Array.prototype.forEach.call(document.querySelectorAll('.product-row'),function(x){x.classList.toggle('selected',Number(x.getAttribute('data-pindex'))===P.indexOf(p))})}
+document.addEventListener('click',function(e){var row=e.target.closest('tr[data-pindex]');if(row)selectProduct(P[Number(row.getAttribute('data-pindex'))])});
+document.addEventListener('keydown',function(e){var row=e.target.closest&&e.target.closest('tr[data-pindex]');if(row&&(e.key==='Enter'||e.key===' ')){e.preventDefault();selectProduct(P[Number(row.getAttribute('data-pindex'))])}});
+
+var originalGen=$('gen').onclick;$('gen').onclick=function(){analysis(35,'인수인계 초안 생성','LLM · 업무 기록과 직원 메모 요약');rep='loading';render();setTimeout(function(){rep='draft';render();analysis(100,'인수인계 초안 준비 완료','LLM · 직원 최종 확인 대기')},900)};
+var originalSend=$('send').onclick;$('send').onclick=function(){originalSend();analysis(100,'인수인계 전달 완료','LLM · 데이터 저장 · 다음 근무조 공유')};
+
+render();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
